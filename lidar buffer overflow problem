@@ -1,0 +1,17 @@
+##if you watched 'buffer overflow detected' on jetson nano + rplidar combo, try this code at cmd.
+
+~/catkin_ws> catkin_make rplidarNode
+
+~/catkin_ws> source ~/catkin_ws/devel/setup.bash
+
+~/catkin_ws> roslaunch rplidar_ros view_rplidar.launch
+
+##if your rviz can't print the lidar image yet, enter the following command additionally.
+
+~/catkin_ws> sudo chmod 777 /dev/ttyUSB0
+
+~/catkin_ws> source ~/catkin_ws/devel/setup.bash
+
+~/catkin_ws> roslaunch rplidar_ros view_rplidar.launch
+
+##Good luck!
